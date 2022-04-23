@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<html id="html">
+<head>
+    <meta charset="UTF-8">
+    <title>Ratatouille</title>
+</head>
+<body>
+    <div class="frame"><p class="display">/</p></div>
+
+    <button class="new">New</button>
+    <button class="settingsBtn fa fa-bars" id="sBtn"></button>
+
+    <div class="settings">
+        <h3>Settings</h3>
+        <p>Enable animations: <input type="checkbox" checked class="animate"></p>
+        <br>
+
+        <div class="addWord" style="background-color: red;">
+            <form action="/add" method="post">
+                <select name="type" id="wordType">
+                    <option value="first">First place (verb)</option>
+                    <option value="mid">Second place (noun)</option>
+                    <option value="end">third place (noun)</option>
+                </select>
+                <input type="text" name="value" placeholder="Word... ">
+                <button class="submit" type="submit">Submit a sentence</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="../src.json" type="application/javascript;charset=utf-8"></script>
+    <script src="app.js"></script>
+</body>
+</html>
